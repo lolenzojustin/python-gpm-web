@@ -551,7 +551,7 @@ class MultiThread(QThread):
                 page.get_by_role("button", name="Create Account").click()
                 time.sleep(3)
                 page.locator('//*[@id="email"]').fill(random_email)
-
+                # time.sleep(1000)
                 try:
                     page.get_by_text("Check Your Email", exact=True).wait_for(timeout=5000)
                     print("Nhập lại mail")
